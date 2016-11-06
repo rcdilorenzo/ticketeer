@@ -1,0 +1,7 @@
+<h1>Login</h1>
+
+<%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
+  <%= text_input f, :username %>
+  <%= password_input f, :password %>
+  <%= submit "Submit" %>
+<% end %>
