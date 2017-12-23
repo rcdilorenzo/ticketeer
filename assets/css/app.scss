@@ -1,0 +1,7 @@
+/* This file is for your main application css. */
+a {
+  color: green;
+  &:hover {
+    color: red;
+  }
+}
