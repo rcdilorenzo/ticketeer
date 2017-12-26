@@ -11,9 +11,13 @@ $linkColor: $brandPrimary;
 @import "container";
 @import "footer";
 @import "table";
+@import "forms";
 
 html {
   background: url(/images/elijah-hiett-298338.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
+.alert-danger {
+  color: #994444;
+}

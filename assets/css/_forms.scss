@@ -1,0 +1,27 @@
+.control-label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 2em;
+}
+
+.form-group input {
+  border-radius: 3px;
+  border: 1px solid $gray;
+  padding: 5px;
+}
+
+.form-group button {
+  margin-left: 164px;
+  margin-top: 7px;
+}
+
+.form-group button[type="submit"] {
+  border-radius: 2px;
+  border: 1px solid $brandPrimary;
+  padding: 3px 7px;
+  cursor: pointer;
+  background: $brandPrimary;
+  color: white;
+}
