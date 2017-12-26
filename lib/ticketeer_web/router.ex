@@ -22,7 +22,12 @@ defmodule TicketeerWeb.Router do
 
     resources "/students", StudentController do
       resources "/tickets", EntryController, except: [:show]
+
+      get "/purchase", ProductController, :purchase_index
+      post "/purchase/:id", ProductController, :purchase
     end
+
+    resources "/store", ProductController, except: [:show]
   end
 
   # Other scopes may use custom stacks.

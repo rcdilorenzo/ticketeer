@@ -1,0 +1,15 @@
+h2 = "Make Purchase for #{@student.name}"
+
+table.table
+  thead
+    tr
+      th Description
+      th Amount
+      th
+  tbody
+    = for product <- @products do
+      tr
+        td = product.description
+        td = product.amount
+        td.text-right
+          span = link "Purchase", method: :post, to: student_product_path(@conn, :purchase, @student, product), class: "btn btn-default btn-xs"

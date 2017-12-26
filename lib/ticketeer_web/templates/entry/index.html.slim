@@ -18,3 +18,5 @@ table.table
           span = link "Edit", to: student_entry_path(@conn, :edit, @student, entry), class: "btn btn-default btn-xs"
           span = link "Delete", to: student_entry_path(@conn, :delete, @student, entry), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
 span = link "New Entry", to: student_entry_path(@conn, :new, @student)
+br
+span = link "Purchase from Store", to: student_product_path(@conn, :purchase_index, @student)
