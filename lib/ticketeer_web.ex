@@ -23,6 +23,9 @@ defmodule TicketeerWeb do
       import Plug.Conn
       import TicketeerWeb.Router.Helpers
       import TicketeerWeb.Gettext
+      import Canary.Plugs
+
+      defmacro student, do: quote do: var!(conn).assigns.student
     end
   end
 

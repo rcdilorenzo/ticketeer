@@ -1,0 +1,18 @@
+<h2>Show Entry</h2>
+
+<ul>
+
+  <li>
+    <strong>Amount:</strong>
+    <%= @entry.amount %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @entry.description %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: student_entry_path(@conn, :edit, @student, @entry) %></span>
+<span><%= link "Back", to: student_entry_path(@conn, :index, @student) %></span>

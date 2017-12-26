@@ -19,8 +19,6 @@ html lang="en"
             ul
               li.nav__link
                 a href="#{student_path(@conn, :index)}" Students
-              li.nav__link
-                a href="#{student_path(@conn, :index)}" Tickets
 
       p.alert.alert-info role="alert" = get_flash(@conn, :info)
       p.alert.alert-danger role="alert" = get_flash(@conn, :error)

@@ -43,7 +43,10 @@ defmodule Ticketeer.Mixfile do
       {:cowboy, "~> 1.0"},
 
       # Slim
-      {:phoenix_slime, "~> 0.8.0"}
+      {:phoenix_slime, "~> 0.8.0"},
+
+      # Load resources
+      {:canary, "~> 1.1.1"}
     ]
   end
 
