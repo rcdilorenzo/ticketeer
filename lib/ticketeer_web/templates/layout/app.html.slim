@@ -1,0 +1,43 @@
+doctype html
+html lang="en"
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta content="" name="description" /
+    meta content="Christian Di Lorenzo" name="author" /
+    title Hello Ticketeer!
+    link href="#{static_path(@conn, "/css/app.css")}" rel="stylesheet" /
+  body
+    .card-container
+      header
+        nav.nav role="navigation"
+          h1.nav__title
+            a href="/" Ticketeer
+          .nav__links
+            ul
+              li.nav__link
+                a href="#{student_path(@conn, :index)}" Students
+              li.nav__link
+                a href="#{student_path(@conn, :index)}" Tickets
+
+      p.alert.alert-info role="alert" = get_flash(@conn, :info)
+      p.alert.alert-danger role="alert" = get_flash(@conn, :error)
+
+      main role="main"
+        = render @view_module, @view_template, assigns
+
+    footer.footer
+      span.footer__label.footer__label--left
+        | Copyright &#169; 2018 Christian Di Lorenzo
+      span.footer__label.footer__label--right
+        | Photo by
+        '
+        a href="https://unsplash.com/photos/u5WwCKRHbwU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Elijah Hiett
+        '
+        | on
+        '
+        a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Unsplash
+
+    script src="#{static_path(@conn, "/js/app.js")}"

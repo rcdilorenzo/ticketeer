@@ -4,6 +4,11 @@ defmodule TicketeerWeb.StudentController do
   alias Ticketeer.People
   alias Ticketeer.People.Student
 
+  def dashboard(conn, _params) do
+    students = People.list_students()
+    render(conn, "dashboard.html", students: students)
+  end
+
   def index(conn, _params) do
     students = People.list_students()
     render(conn, "index.html", students: students)

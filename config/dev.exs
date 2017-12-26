@@ -37,7 +37,7 @@ config :ticketeer, TicketeerWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/ticketeer_web/views/.*(ex)$},
-      ~r{lib/ticketeer_web/templates/.*(eex)$}
+      ~r{lib/ticketeer_web/templates/.*(eex|slim)$}
     ]
   ]
 

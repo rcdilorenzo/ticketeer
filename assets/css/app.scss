@@ -1,14 +1,19 @@
-$green: green;
+$green: #26A65B;
+$offWhite: #DDDDDD;
+$gray: #CCC;
 
 $brandPrimary: $green;
 
 $linkColor: $brandPrimary;
+
+@import "typography";
+@import "navigation";
+@import "container";
+@import "footer";
+@import "table";
 
 html {
   background: url(/images/elijah-hiett-298338.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
-a {
-  color: $brandPrimary;
-}

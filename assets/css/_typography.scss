@@ -1,0 +1,7 @@
+a {
+  color: $brandPrimary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

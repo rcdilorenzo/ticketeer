@@ -16,7 +16,7 @@ defmodule TicketeerWeb.Router do
   scope "/", TicketeerWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", StudentController, :dashboard
     resources "/students", StudentController
     resources "/users", UserController
   end

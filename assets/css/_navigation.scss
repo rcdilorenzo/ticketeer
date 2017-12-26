@@ -1,0 +1,21 @@
+.nav {
+  border-bottom: 1px solid #999999;
+}
+
+.nav__title {
+  font-size: 18pt;
+  line-height: 18pt;
+  a { color: black; }
+}
+
+.nav__links {
+  display: inline-block;
+  float: right;
+  margin-top: -55px;
+  ul { list-style-type: none; }
+}
+
+.nav__link {
+  float: left;
+  margin-left: 15px;
+}

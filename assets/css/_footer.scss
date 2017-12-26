@@ -1,0 +1,19 @@
+.footer a {
+  color: white;
+  font-weight: bold;
+}
+
+.footer__label {
+  color: white;
+  font-size: 6pt;
+  position: absolute;
+  bottom: 12px;
+}
+
+.footer__label--left {
+  left: 7px;
+}
+
+.footer__label--right {
+  right: 7px;
+}
