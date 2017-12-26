@@ -18,7 +18,10 @@ defmodule Ticketeer.Register do
 
   """
   def list_entries(student) do
-    Repo.preload(student, :entries).entries
+    query = from e in Entry,
+      where: e.student_id == ^student.id,
+      order_by: [desc: :inserted_at]
+    Repo.all(query)
   end
 
   def ticket_count(student) do

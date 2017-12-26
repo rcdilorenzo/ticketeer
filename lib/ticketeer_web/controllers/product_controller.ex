@@ -52,7 +52,7 @@ defmodule TicketeerWeb.ProductController do
       {:ok, product} ->
         conn
         |> put_flash(:info, "Product created successfully.")
-        |> redirect(to: product_path(conn, :show, product))
+        |> redirect(to: product_path(conn, :index))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
