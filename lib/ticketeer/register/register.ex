@@ -21,6 +21,15 @@ defmodule Ticketeer.Register do
     Repo.preload(student, :entries).entries
   end
 
+  def ticket_count(student) do
+    query = from e in Entry,
+      where: e.student_id == ^student.id,
+      group_by: e.student_id,
+      select: %{ balance: sum(e.amount) }
+    result = Repo.one(query) || %{balance: 0}
+    result[:balance]
+  end
+
   @doc """
   Gets a single entry.
 

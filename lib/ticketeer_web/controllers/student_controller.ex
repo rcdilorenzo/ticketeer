@@ -11,7 +11,7 @@ defmodule TicketeerWeb.StudentController do
 
   def index(conn, _params) do
     students = People.list_students()
-    render(conn, "index.html", students: students)
+    render(conn, "dashboard.html", students: students)
   end
 
   def new(conn, _params) do
