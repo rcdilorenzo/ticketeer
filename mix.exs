@@ -49,7 +49,10 @@ defmodule Ticketeer.Mixfile do
       {:canary, "~> 1.1.1"},
 
       # Date/Time
-      {:timex, "~> 3.1"}
+      {:timex, "~> 3.1"},
+
+      # Release manager
+      {:distillery, "~> 1.5", runtime: false}
     ]
   end
 
