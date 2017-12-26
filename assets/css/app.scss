@@ -1,7 +1,14 @@
-/* This file is for your main application css. */
+$green: green;
+
+$brandPrimary: $green;
+
+$linkColor: $brandPrimary;
+
+html {
+  background: url(/images/elijah-hiett-298338.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
 a {
-  color: green;
-  &:hover {
-    color: red;
-  }
+  color: $brandPrimary;
 }
