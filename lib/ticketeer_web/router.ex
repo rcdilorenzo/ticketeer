@@ -21,7 +21,7 @@ defmodule TicketeerWeb.Router do
     resources "/users", UserController
 
     resources "/students", StudentController do
-      resources "/tickets", EntryController
+      resources "/tickets", EntryController, except: [:show]
     end
   end
 

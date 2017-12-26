@@ -24,15 +24,10 @@ defmodule TicketeerWeb.EntryController do
       {:ok, entry} ->
         conn
         |> put_flash(:info, "Entry created successfully.")
-        |> redirect(to: student_entry_path(conn, :show, student(), entry))
+        |> redirect(to: student_entry_path(conn, :index, student()))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", student: student(), changeset: changeset)
     end
-  end
-
-  def show(conn, %{"id" => id}) do
-    entry = Register.get_entry!(student(), id)
-    render(conn, "show.html", student: student(), entry: entry)
   end
 
   def edit(conn, %{"id" => id}) do

@@ -46,7 +46,10 @@ defmodule Ticketeer.Mixfile do
       {:phoenix_slime, "~> 0.8.0"},
 
       # Load resources
-      {:canary, "~> 1.1.1"}
+      {:canary, "~> 1.1.1"},
+
+      # Date/Time
+      {:timex, "~> 3.1"}
     ]
   end
 
