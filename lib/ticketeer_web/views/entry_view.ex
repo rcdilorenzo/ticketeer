@@ -3,6 +3,10 @@ defmodule TicketeerWeb.EntryView do
 
   @timezone "EST"
 
+  def tcount(student) do
+    Ticketeer.Register.ticket_count(student)
+  end
+
   def tx(date) do
     date
     |> Timex.to_datetime
