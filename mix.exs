@@ -52,7 +52,10 @@ defmodule Ticketeer.Mixfile do
       {:timex, "~> 3.1"},
 
       # Release manager
-      {:distillery, "~> 1.5", runtime: false}
+      {:distillery, "~> 1.5", runtime: false},
+
+      # CSV (for importing)
+      {:csvlixir, "~> 2.0"}
     ]
   end
 
