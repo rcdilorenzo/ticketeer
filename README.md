@@ -1,5 +1,7 @@
 # Ticketeer
 
+![screenshot from 2017-12-29 11-11-01](https://user-images.githubusercontent.com/634167/34441352-2797a316-ec89-11e7-85e4-7e1dec05f8a3.png)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
