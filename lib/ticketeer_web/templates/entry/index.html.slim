@@ -3,22 +3,30 @@ h2
   | 's Tickets
 p "Balance: #{tcount(@student)} tickets"
 
-table.table
-  thead
-    tr
-      th Date
-      th Description
-      th Amount
-      th
-  tbody
-    = for entry <- @entries do
+#ticketsTable(data-student-id="#{@student.id}")
+  nav.pagination
+    span.pagination__link.pagination__link--previous
+      a(v-if="pageNumber > 1" v-on:click="previousPage") &#171
+    span.pagination__text = " Page {{ pageNumber }} of {{ totalPages }} "
+    span.pagination__link.pagination__link--next
+      a(v-if="pageNumber < totalPages" v-on:click="nextPage") &#187
+
+  table.table
+    thead
       tr
-        td = inserted(entry)
-        td = entry.description
-        td = entry.amount
+        th Date
+        th Description
+        th Amount
+        th
+    tbody
+      tr(v-for="entry in entries")
+        td "{{ entry.date }}"
+        td "{{ entry.description }}"
+        td "{{ entry.amount }}"
         td.text-right
-          span = link "Edit", to: student_entry_path(@conn, :edit, @student, entry), class: "btn btn-default btn-xs"
-          span = link "Delete", to: student_entry_path(@conn, :delete, @student, entry), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
-span = link "New Entry", to: student_entry_path(@conn, :new, @student)
-br
-span = link "Purchase from Store", to: student_product_path(@conn, :purchase_index, @student)
+          span
+            a(v-bind:href="entry.links.edit") Edit
+          /! span = raw "<a v-on:click=\"deleteEntry(entry)\">Delete</a>"
+
+div = link "New Entry", to: student_entry_path(@conn, :new, @student)
+div = link "Purchase from Store", to: student_product_path(@conn, :purchase_index, @student)

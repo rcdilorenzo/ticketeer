@@ -8,7 +8,6 @@ defmodule TicketeerWeb.EntryController do
   plug :load_resource, model: Student, id_name: "student_id", persisted: true
 
   def index(conn, _params) do
-    IO.inspect conn.assigns
     entries = Register.list_entries(student())
     render(conn, "index.html", student: student(), entries: entries)
   end

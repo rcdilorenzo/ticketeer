@@ -18,10 +18,19 @@ defmodule Ticketeer.Register do
 
   """
   def list_entries(student) do
+    list_entries(student, :query_only)
+    |> Repo.all
+  end
+
+  def list_entries(student, :query_only) do
     query = from e in Entry,
       where: e.student_id == ^student.id,
       order_by: [desc: :inserted_at]
-    Repo.all(query)
+  end
+
+  def list_entries(student, :paginated, opts \\ [page: 1]) do
+    list_entries(student, :query_only)
+    |> Repo.paginate(opts)
   end
 
   def ticket_count(student) do

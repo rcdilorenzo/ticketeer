@@ -14,9 +14,9 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       include: __dirname,
-      query: {
-        presets: ['es2015']
-      }
+      query: ({
+        presets: ['es2015', 'stage-3']
+      })
     }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('css-loader!sass-loader')

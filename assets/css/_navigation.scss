@@ -19,3 +19,16 @@
   float: left;
   margin-left: 15px;
 }
+
+
+// Pagination
+
+.pagination {
+  display: inline-block;
+  float: right;
+}
+
+.pagination__link {
+  user-select: none;
+  a { font-size: 14pt; }
+}

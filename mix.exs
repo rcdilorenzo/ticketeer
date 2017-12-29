@@ -55,7 +55,10 @@ defmodule Ticketeer.Mixfile do
       {:distillery, "~> 1.5", runtime: false},
 
       # CSV (for importing)
-      {:csvlixir, "~> 2.0"}
+      {:csvlixir, "~> 2.0"},
+
+      # Pagination
+      {:scrivener_ecto, "~> 1.3"}
     ]
   end
 

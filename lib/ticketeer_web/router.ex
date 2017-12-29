@@ -31,7 +31,11 @@ defmodule TicketeerWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TicketeerWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", TicketeerWeb.Api do
+    pipe_through :api
+
+    resources "/students", StudentController, only: [] do
+      resources "/tickets", EntryController, only: [:index]
+    end
+  end
 end
